@@ -17,8 +17,7 @@ Arguments (cli):
     -db_names: up to n db names that script is going to optimize
 Important variables:
     SERVERS_PATH: path to .yml config file where listed all servers in format user@host@
-    command: path to the sh script on the dedicated server
-    metrics: .....
+    COMMAND: path to the sh script on the dedicated server
 Description:
     Connect via ssh to each server listed in SERVERS_PATH. For each database given in cli
     runs OPTIMIZE TABLE command locally. Collects statistics for each db:
