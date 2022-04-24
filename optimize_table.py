@@ -27,7 +27,7 @@ Description:
         Total time spent
     metrics format:
         hostname = {
-            db: OK: count, FAIL: count,
+            db: {OK: count, FAIL: count},
             time: time spent on server,
             }
 """
