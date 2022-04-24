@@ -23,9 +23,15 @@ Description:
     Connect via ssh to each server listed in SERVERS_PATH. For each database given in cli
     runs OPTIMIZE TABLE command locally. Collects statistics for each db:
         How much tables was able to optimize
-        How much time takes all server to optimize all db'servers.yml'
-        Total to run script on all servers total.
+        How much time takes server to optimize all db listed in servers.yml'
+        Total time spent
+    metrics format:
+        hostname = {
+            db: OK: count, FAIL: count,
+            time: time spent on server,
+            }
 """
+
 parser = argparse.ArgumentParser(
     description="Runs OPTIMIZE TABLE querry for each database declared in command line. Collects metrics for each server: sucess/fail, total time", 
     formatter_class=argparse.ArgumentDefaultsHelpFormatter)
@@ -41,22 +47,6 @@ COMMAND = "/path_to_script/./optimize_table.sh %s"
 
 def process_metrics(metrics, server, lines, start_time, error_message=None):
     """
-    Input:
-        metrics: dictionary with collected statistics
-        server: string with server name
-        lines: list with messages, each element is new line of message from server
-        start_time: measure start time
-        error_message: if connection failed, stops metrics collection
-    Output: 
-        same metrics, fills metrics dict
-        metrics format:
-            hostname: 
-                - db: 
-                    -OK: count
-                    -FAIL: count
-                    -(if db doesent exist) ERROR STATUS
-                - time:
-                    time spent on server
     Description:
         This function collect metrics of the output message for each server, where
         databases are delimited with "==========".
