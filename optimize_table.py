@@ -25,8 +25,8 @@ Description:
         How much time takes server to optimize all db listed in servers.yml'
         Total time spent
     metrics format:
-        hostname = {
-            db: {OK: count, FAIL: count},
+        server_name = {
+            db_name: {OK: count, FAIL: count},
             time: time spent on server,
             }
 """
