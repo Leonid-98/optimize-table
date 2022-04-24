@@ -16,7 +16,7 @@ Arguments (cli):
     -n: dry-run key, if enabled, then script does noth optimizes tables
     -db_names: up to n db names that script is going to optimize
 Important variables:
-    SERVERS_PATH: path to .yml config file where listed all servers in format user@host@
+    SERVERS_PATH: path to .yml config file where listed all servers in format user@host
     COMMAND: path to the sh script on the dedicated server
 Description:
     Connect via ssh to each server listed in SERVERS_PATH. For each database given in cli
