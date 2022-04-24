@@ -1,0 +1,8 @@
+{'doesent_exist@localhost': 'Invalid user',
+ 'leonid98@127.0.0.1': {'Unknown db 1': 'dummy_db_that_doesent_exists',
+                        'db_name_1': {'FAIL': 0, 'OK': 2},
+                        'time': '0:00:00.183533'},
+ 'leonid98@doesent_exist': 'Invalid host',
+ 'leonid98@localhost': {'Unknown db 1': 'dummy_db_that_doesent_exists',
+                        'db_name_1': {'FAIL': 0, 'OK': 2},
+                        'time': '0:00:00.177829'}}

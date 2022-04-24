@@ -1,0 +1,5 @@
+servers:
+  - leonid98@localhost
+  - leonid98@127.0.0.1
+  - doesent_exist@localhost
+  - leonid98@doesent_exist
